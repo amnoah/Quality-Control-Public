@@ -32,13 +32,11 @@ Chat:
 
 Crasher:
 (Cheats that attempt to crash servers)
-- CrasherA, am noah, Invalid Payload Channel
+- CrasherA, am noah, Invalid Signs
 - CrasherB, am noah, Invalid Payload Size
 - CrasherC, am noah, Invalid Locale
 - CrasherD, am noah, Invalid Rename
 - CrasherE, am noah, Low Render Distance
-- CrasherF, am noah, Impossible Setting
-- CrasherG, am noah, Invalid Signs
 
 Disabler:
 (Cheats that attempt to disable anticheats)
@@ -66,7 +64,6 @@ Invalid Position:
 - InvalidPositionB, am noah, Invalid 1.9+ onGround Status
 - InvalidPositionC, am noah, Flying Sequence
 - InvalidPositionD, am noah, Sent Invalid 0.03 Position
-- InvalidPositionE, DefineOutside, Wrongful Teleport
 
 Invalid Rotation:
 (Completely wrongful rotations)

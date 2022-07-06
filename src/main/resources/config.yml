@@ -153,16 +153,6 @@ checks:
       punish-vl: 1
       punish-command: 'say %player% would be kicked for CrasherE'
 
-    f:
-      enabled: true
-      punish-vl: 1
-      punish-command: 'say %player% would be kicked for CrasherF'
-
-    g:
-      enabled: true
-      punish-vl: 1
-      punish-command: 'say %player% would be kicked for CrasherG'
-
   disabler:
     a:
       enabled: true
@@ -227,11 +217,6 @@ checks:
       enabled: true
       punish-vl: 1
       punish-command: 'say %player% would be kicked for InvalidPositionD'
-
-    e:
-      enabled: true
-      punish-vl: 1
-      punish-command: 'say %player% would be kicked for InvalidPositionE'
 
   invalidrotation:
     a:

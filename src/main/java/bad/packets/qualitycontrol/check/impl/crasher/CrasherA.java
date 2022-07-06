@@ -6,6 +6,7 @@ import bad.packets.qualitycontrol.player.QualityControlPlayer;
 import com.github.retrooper.packetevents.event.simple.PacketPlayReceiveEvent;
 import com.github.retrooper.packetevents.protocol.packettype.PacketType;
 import com.github.retrooper.packetevents.wrapper.play.client.WrapperPlayClientPluginMessage;
+import com.github.retrooper.packetevents.wrapper.play.client.WrapperPlayClientUpdateSign;
 
 /**
  * Created by am noah
@@ -18,19 +19,19 @@ public class CrasherA extends PacketCheck {
     public CrasherA(final QualityControlPlayer data) {
         super(data);
 
-        listenedPacketsIncoming.add(PacketType.Play.Client.PLUGIN_MESSAGE);
+        listenedPacketsIncoming.add(PacketType.Play.Client.UPDATE_SIGN);
     }
 
     @Override
     public void handleIncomingPacket(PacketPlayReceiveEvent event) {
-        WrapperPlayClientPluginMessage wrapper = new WrapperPlayClientPluginMessage(event);
-        final int length = wrapper.getChannelName().length();
+        WrapperPlayClientUpdateSign wrapper = new WrapperPlayClientUpdateSign(event);
 
-        /* Of course it shouldn't be empty, and according to Dinnerbone's blog it should be a maximum of 16 characters.
-         * https://dinnerbone.com/blog/2012/01/13/minecraft-plugin-channels-messaging/
-         *
-         * This may have changed... I have no idea.
+        /*
+         * As far as I can tell the maximum length is 45, but just in case there are any smaller characters than a
+         * period which can go on signs I went with 50.
          */
-        if (length == 0 || length > 16) fail();
+        for (String line : wrapper.getTextLines()) {
+            if (line.length() > 50) fail();
+        }
     }
 }
