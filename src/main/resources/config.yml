@@ -1,0 +1,391 @@
+# Quality Control
+
+# Don't change this.
+config-version: 0.03
+
+alerts:
+  auto-enable-alerts: true
+
+  # Write in milliseconds (1 second = 1000 milliseconds).
+  alert-cooldown: 1000
+
+  decay-enabled: true
+
+  # Write in milliseconds (1 second = 1000 milliseconds).
+  decay-per: 7500
+
+  # Write in milliseconds (1 second = 1000 milliseconds).
+  start-decay-after: 10000
+
+messages:
+  # Placeholders: %player%, %check%, %identifier%, %vl%, %unstable%
+  alert: '&b&lQC > &r&7%player% &9failed &7%check% %identifier% &9VL: &7%vl% %buffered%'
+
+  # Placeholders: %player%, %clientbrand%, %debug%
+  # Use \n to go down a line.
+  alert-hover: ' &8debug: &7%debug%\n&8Client Brand: &7%clientbrand%\n&9Click to TP.'
+
+  # Placeholders: %player%
+  alert-command: 'tp %player%'
+
+  # Placeholders: %player%, %clientbrand%,
+  # Set to '' to disable.
+  player-join-alert: '&b&lQC > &r&7%player% &9has joined using &7%clientbrand%&9.'
+
+  disable-alerts: '&b&lQC > &r&9You have now &7Disabled &9alerts.'
+  enable-alerts: '&b&lQC > &r&9You have now &7Enabled &9alerts.'
+
+checks:
+  aimassist:
+    a:
+      enabled: true
+      punish-vl: 10
+      # Write the command without the slash. Use %player% in the spots that require the player's name.
+      punish-command: 'say %player% would be kicked for AimAssistA'
+
+    c:
+      enabled: true
+      punish-vl: 10
+      punish-command: 'say %player% would be kicked for AimAssistC'
+
+    d:
+      enabled: true
+      punish-vl: 10
+      punish-command: 'say %player% would be kicked for AimAssistD'
+
+    e:
+      enabled: true
+      punish-vl: 10
+      punish-command: 'say %player% would be kicked for AimAssistE'
+
+    f:
+      enabled: true
+      punish-vl: 10
+      punish-command: 'say %player% would be kicked for AimAssistF'
+
+  autoblock:
+    a:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for AutoBlockA'
+
+    b:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for AutoBlockB'
+
+    c:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for AutoBlockC'
+
+    d:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for AutoBlockD'
+
+    e:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for AutoBlockE'
+
+    f:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for AutoBlockF'
+
+  brandspoof:
+    a:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for BrandSpoofA'
+
+    b:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for BrandSpoofB'
+
+    # NOTICE: This check can cause lag on log-in
+    c:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for BrandSpoofC'
+
+    d:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for BrandSpoofD'
+
+  chat:
+    a:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for ChatA'
+
+    b:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for ChatB'
+
+  crasher:
+    a:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for CrasherA'
+
+    b:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for CrasherB'
+
+    c:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for CrasherC'
+
+    d:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for CrasherD'
+
+    e:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for CrasherE'
+
+    f:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for CrasherF'
+
+    g:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for CrasherG'
+
+  disabler:
+    a:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for DisablerA'
+
+    b:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for DisablerB'
+
+  elytra:
+    a:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for ElytraA'
+
+  fastbreak:
+    a:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for FastBreakA'
+
+    b:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for FastBreakB'
+
+  invalidcombat:
+    a:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for InvalidCombatA'
+
+    b:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for InvalidCombatB'
+
+    c:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for InvalidCombatC'
+
+  invalidposition:
+    a:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for InvalidPositionA'
+
+    b:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for InvalidPositionB'
+
+    c:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for InvalidPositionC'
+
+    d:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for InvalidPositionD'
+
+    e:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for InvalidPositionE'
+
+  invalidrotation:
+    a:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for InvalidRotationA'
+
+    b:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for InvalidRotationB'
+
+    c:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for InvalidRotationC'
+
+  inventory:
+    a:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for InventoryA'
+
+    b:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for InventoryB'
+
+    c:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for InventoryC'
+
+  macro:
+    a:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for MacroA'
+
+    b:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for MacroB'
+
+  noslow:
+    a:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for NoSlowA'
+
+  noswing:
+    a:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for NoSwingA'
+
+    b:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for NoSwingB'
+
+  packetorder:
+    a:
+      enabled: true
+      punish-vl: 3
+      punish-command: 'say %player% would be kicked for PacketOrderA'
+
+    b:
+      enabled: true
+      punish-vl: 3
+      punish-command: 'say %player% would be kicked for PacketOrderB'
+
+  pingspoof:
+    a:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for PingSpoofA'
+
+  returnorder:
+    a:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for ReturnOrderA'
+
+    b:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for ReturnOrderB'
+
+    c:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for ReturnOrderC'
+
+    d:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for ReturnOrderD'
+
+  scaffold:
+    a:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for ScaffoldA'
+
+    b:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for ScaffoldB'
+
+    c:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for ScaffoldC'
+
+    d:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for ScaffoldD'
+
+    e:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for ScaffoldE'
+
+  skinblinker:
+    a:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for SkinBlinkerA'
+
+  vehiclemove:
+    a:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for VehicleMoveA'
+
+    b:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for VehicleMoveB'
+
+  wtap:
+    a:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for WTapA'
+
+    b:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for WTapB'
+
+    c:
+      enabled: true
+      punish-vl: 1
+      punish-command: 'say %player% would be kicked for WTapC'

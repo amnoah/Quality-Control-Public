@@ -1,0 +1,19 @@
+name: QualityControl
+version: 0.03
+author: Spiriten
+api-version: 1.13
+main: bad.packets.qualitycontrol.QualityControlPlugin
+load: STARTUP
+
+permissions:
+  qualitycontrol.alerts:
+    description: Allows users to receive alerts.
+
+  qualitycontrol.commands:
+    description: Allows users to use QualityControl commands.
+
+commands:
+  qc:
+    description: The main QualityControl command.
+    aliases: qualitycontrol
+    permission: qualitycontrol.commands
